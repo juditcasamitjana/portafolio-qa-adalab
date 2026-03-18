@@ -1,7 +1,7 @@
 # Portfolio QA – Judit Casamitjana 
 Este portafolio web muestra mis proyectos de **QA**. Incluye un **formulario de contacto** conectado a una API que permite guardar los datos del formulario en la base de datos y mostrarlos en la página de Admin.
 
-🔗 [Ver Web Portfolio QA]([https://bootcamp-qa.github.io/template-portfolioqa/](https://juditcasamitjana.github.io/portafolio-qa-adalab/))
+🔗 [Ver Web Portfolio QA](https://juditcasamitjana.github.io/portafolio-qa-adalab/)
 
 
 ## ⚙️ Funcionalidades principales
