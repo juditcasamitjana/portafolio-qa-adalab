@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 *,
 *::before,
 *::after {
@@ -41,7 +40,6 @@ h1, h2, h3 {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
-/* ===== NAVIGATION ===== */
 nav {
   position: fixed;
   top: 0;
@@ -111,7 +109,7 @@ nav.scrolled {
   background-color: rgba(138, 121, 104, 0.08);
 }
 
-/* ===== HEADER / HERO ===== */
+
 header {
   background: var(--text);
   color: #f0ebe5;
@@ -146,7 +144,7 @@ header::after {
   border-radius: 50%;
 }
 
-/* QA code background decoration */
+
 .hero-bg-code {
   position: absolute;
   top: 0;
@@ -200,7 +198,7 @@ header::after {
   flex: 1;
 }
 
-/* Profile photo */
+
 .header-photo {
   width: 200px;
   height: 200px;
@@ -268,14 +266,14 @@ header #titulo {
   transform: translateY(-2px);
 }
 
-/* ===== MAIN ===== */
+
 main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-/* ===== SECTIONS ===== */
+
 section {
   margin-bottom: 5rem;
 }
@@ -296,7 +294,7 @@ h2 i {
   font-size: 1.5rem;
 }
 
-/* ===== ABOUT ===== */
+
 .about-content p {
   font-size: 1.05rem;
   color: var(--text-light);
@@ -326,7 +324,7 @@ h2 i {
   background: rgba(138, 121, 104, 0.18);
 }
 
-/* ===== PROJECTS ===== */
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -416,7 +414,7 @@ h2 i {
   border-radius: 6px;
 }
 
-/* ===== EDUCATION / TIMELINE ===== */
+
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -485,7 +483,7 @@ h2 i {
   line-height: 1.7;
 }
 
-/* ===== CONTACT FORM ===== */
+
 .contact-wrapper {
   max-width: 600px;
 }
@@ -561,7 +559,7 @@ button:active {
   font-weight: 500;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
   border-top: 1px solid var(--border);
   padding: 2.5rem 2rem;
@@ -602,7 +600,7 @@ footer p {
   color: var(--text-muted);
 }
 
-/* ===== LINKS (global) ===== */
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -612,7 +610,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ===== TABLE (kept for data display) ===== */
+
 table {
   width: 100%;
   border-collapse: collapse;
