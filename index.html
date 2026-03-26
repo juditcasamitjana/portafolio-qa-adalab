@@ -7,176 +7,302 @@
   <meta name="description" content="Portafolio Judit Casamitjana QA" />
   <meta name="author" content="Judit Casamitjana" />
   <title>Judit Casamitjana - Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href="style.css" rel="stylesheet" />
-  <!-- Importar Font Awesome para los iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
   <!-- Menú de navegación -->
-  <nav>
-    <ul>
-      <li><a id="menusobremi" href="#sobremi">Sobre mí</a></li>
-      <li><a id="menuproyectos" href="#proyectos">Proyectos</a></li>
-      <li><a id="menueducacion" href="#educacion">Educación</a></li>
-      <li><a id="menucontacto" href="#contacto">Contacto</a></li>
-    </ul>
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">JC</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a id="menusobremi" href="#sobremi">Sobre mí</a></li>
+        <li><a id="menuproyectos" href="#proyectos">Proyectos</a></li>
+        <li><a id="menueducacion" href="#educacion">Educación</a></li>
+        <li><a id="menucontacto" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
   </nav>
+
   <header>
-    <h1 id="minombre">Judit Casamitjana</h1>
-    <p id="titulo">Junior QA</p>
-    <p>
-      <a id="linkgithub" href="https://juditcasamitjana.github.io/" title="GitHub"
-        class="fa fa-github fa-2x" aria-label="GitHub"></a>
-      <a id="linklinkedin" href="https://www.linkedin.com/in/judit-casamitjana" title="LinkedIn" class="fa fa-linkedin fa-2x"
-        aria-label="LinkedIn"></a>
-    </p>
+    <!-- QA-themed background decoration -->
+    <div class="hero-bg-code hero-bg-left" aria-hidden="true">
+      <span>import { test, expect }</span>
+      <span>from '@playwright/test';</span>
+      <span></span>
+      <span>describe('Login', () => {</span>
+      <span>&nbsp;&nbsp;it('validates credentials',</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;() => {</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;expect(status).toBe(200);</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;expect(token).toBeDefined;</span>
+      <span>&nbsp;&nbsp;});</span>
+      <span>});</span>
+      <span></span>
+      <span>Feature: Authentication</span>
+      <span>&nbsp;&nbsp;Scenario: Valid login</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;Given a registered user</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;When valid credentials</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;Then see dashboard</span>
+    </div>
+    <div class="hero-bg-code hero-bg-right" aria-hidden="true">
+      <span>test('API data', async () => {</span>
+      <span>&nbsp;&nbsp;const res = await get(</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;'/api/users');</span>
+      <span>&nbsp;&nbsp;expect(res.status).toBe(200);</span>
+      <span>&nbsp;&nbsp;expect(body).toHaveLength(10);</span>
+      <span>});</span>
+      <span></span>
+      <span>&nbsp;&nbsp;Scenario: Invalid password</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;Given a registered user</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;When invalid password</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;Then see error message</span>
+      <span></span>
+      <span>PASS &#10003; 24 passed</span>
+      <span>Coverage: 96.4%</span>
+      <span>Time: 4.2s</span>
+    </div>
+    <div class="header-content">
+      <div class="header-text">
+        <p class="header-greeting">Hola, soy</p>
+        <h1 id="minombre">Judit Casamitjana</h1>
+        <p id="titulo">Junior QA Engineer</p>
+        <div class="header-social">
+          <a id="linkgithub" href="https://juditcasamitjana.github.io/" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a id="linklinkedin" href="https://www.linkedin.com/in/judit-casamitjana" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="header-photo">
+        <!-- Replace src with your personal photo -->
+        <img src="photo-placeholder.svg" alt="Judit Casamitjana" />
+      </div>
+    </div>
   </header>
+
   <main>
+    <!-- Sobre mí -->
     <section id="sobremi">
       <h2 id="titulosobremi">
-        <i class="fa fa-user"></i> Sobre mi
+        <i class="fa-solid fa-user"></i> Sobre mí
       </h2>
-      <p>
-        Soy QA con formación en testing manual, automatización, pruebas de APIs y metodologías ágiles. Cuento con
-        experiencia previa en el ámbito del marketing, donde he desarrollado habilidades clave como la organización, la
-        comunicación y el trabajo en equipo. Me considero una persona responsable, con iniciativa y con gran interés en
-        seguir aprendiendo y creciendo profesionalmente dentro del área de calidad de software.
-      </p>
-
+      <div class="about-content">
+        <p>
+          Soy QA con formación en testing manual, automatización, pruebas de APIs y metodologías ágiles. Cuento con
+          experiencia previa en el ámbito del marketing, donde he desarrollado habilidades clave como la organización, la
+          comunicación y el trabajo en equipo. Me considero una persona responsable, con iniciativa y con gran interés en
+          seguir aprendiendo y creciendo profesionalmente dentro del área de calidad de software.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-tag">Testing Manual</span>
+          <span class="skill-tag">Automatización</span>
+          <span class="skill-tag">Playwright</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">BDD / Gherkin</span>
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
     </section>
 
+    <!-- Proyectos -->
     <section id="proyectos">
       <h2 id="tituloproyectos">
-        <i class="fa fa-folder-open"></i> Proyectos
+        <i class="fa-solid fa-folder-open"></i> Proyectos
       </h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-globe project-icon"></i>
+            <span class="project-badge">QA Manual & Automation</span>
+          </div>
+          <h3>
+            <a id="linkproyectoapi" href="https://web-qa.dev.adalab.es/" target="_blank">
+              Pagina Web Vida Verde <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </h3>
+          <p>
+            Aseguramiento de la calidad de una aplicación web trabajando en equipo bajo
+            <strong>metodologías ágiles Scrum</strong>, con <strong>sprints semanales</strong> gestionados en
+            <strong>Jira</strong> y participación activa en Sprint Planning, dailys y Sprint Review.
+          </p>
+          <p>
+            Diseño de pruebas con metodología <strong>BDD</strong> y escenarios en <strong>Gherkin</strong>,
+            gestionados con <strong>AssertThat</strong> para mantener la trazabilidad entre requisitos, pruebas y
+            resultados. Ejecución en entornos web y móviles.
+          </p>
+          <p>
+            Realización de <strong>pruebas funcionales</strong> y <strong>exploratorias</strong>, con reporte de
+            defectos vinculados en <strong>Jira</strong>. Documentación de releases y plan de pruebas en
+            <strong>Confluence</strong>.
+          </p>
+          <p>
+            Automatización de pruebas de <strong>regresión</strong> con <strong>Playwright</strong> y
+            <strong>Pytest</strong>, integradas en <strong>GitHub Actions</strong> para ejecución semanal.
+          </p>
+          <div class="project-tags">
+            <span>Jira</span>
+            <span>BDD</span>
+            <span>Playwright</span>
+            <span>Pytest</span>
+            <span>GitHub Actions</span>
+          </div>
+        </article>
 
-      <h3>
-        <a id="linkproyectoapi" href="https://web-qa.dev.adalab.es/" target="_blank">Pagina Web Vida Verde</a>
-        – QA Manual y Automation
-      </h3>
-      <p>
-        Realicé el aseguramiento de la calidad de una aplicación web ya desarrollada,
-        trabajando en equipo bajo <strong>metodologías ágiles Scrum</strong>. La gestión del
-        trabajo se realizó mediante <strong>sprints semanales</strong> utilizando
-        <strong>Jira</strong>, participando activamente en las ceremonias de
-        <strong>Sprint Planning</strong>, <strong>dailys</strong> y <strong>Sprint Review</strong>
-        al final de cada sprint.
-      </p>
-
-      <p>
-        Diseñé las pruebas de las historias de usuario siguiendo la metodología
-        <strong>BDD</strong>, partiendo de los criterios de aceptación definidos. Se crearon
-        escenarios en lenguaje <strong>Gherkin</strong> para disponer de pruebas legibles y
-        comprensibles para todo el equipo, gestionándolas con <strong>AssertThat</strong> para
-        mantener la <strong>trazabilidad</strong> entre requisitos, pruebas y resultados dentro
-        de <strong>Jira</strong>. Las pruebas se ejecutaron por historia de usuario y se
-        registraron los resultados en entornos web y móviles.
-      </p>
-
-      <p>
-        Durante cada sprint se realizaron <strong>pruebas funcionales</strong> y, al final del
-        mismo, <strong>pruebas exploratorias</strong> para identificar defectos no cubiertos por
-        los casos definidos. Los errores detectados se reportaron en <strong>Jira</strong>,
-        vinculándolos a la historia de usuario correspondiente para asegurar la correcta
-        trazabilidad entre requisitos, pruebas y defectos.
-      </p>
-
-      <p>
-        Al cierre de cada sprint se preparó la <strong>release</strong> en <strong>Jira</strong>
-        y se documentó en <strong>Confluence</strong> la información relacionada con la entrega,
-        incluyendo la documentación completa del <strong>plan de pruebas</strong>, resultados
-        de ejecución y estado de calidad del producto.
-      </p>
-
-      <p>
-        Tras la release, se identificaron los <strong>flujos principales</strong> de la
-        aplicación y se automatizaron las pruebas de <strong>regresión</strong> utilizando
-        <strong>Playwright</strong> y <strong>Pytest</strong> con <strong>Python</strong>. Estas
-        pruebas se integraron en un flujo de <strong>integración continua</strong> con
-        <strong>GitHub Actions</strong>, configurado para ejecutar automáticamente la regresión
-        de forma semanal, alineada con el cierre de cada sprint.
-      </p>
-      <h3>
-        <a id="linkproyectoportafolio" href="https://github.com/juditcasamitjana/portafolio-qa-adalab">Portafolio QA</a>
-        – Desarrolladora Web y QA en Testing de APIs
-      </h3>
-      <p>
-        Desarrollé un portafolio web utilizando <strong>HTML5</strong>, <strong>CSS3</strong> y
-        <strong>JavaScript</strong>, integrando un formulario conectado a una
-        <strong>API</strong> generada con <strong>Supabase</strong>. Se diseñaron las tablas
-        de la base de datos y se realizaron consultas en <strong>SQL</strong> para la
-        inserción y consulta de datos de prueba del formulario.
-      </p>
-
-      <p>
-        Realicé <strong>testing de APIs</strong> utilizando <strong>Postman</strong>, creando
-        pruebas para las peticiones <strong>GET</strong> (consulta),
-        <strong>POST</strong> (creación), <strong>PATCH</strong> (edición) y
-        <strong>DELETE</strong> (eliminación). Se implementaron tests que validan códigos de
-        respuesta positivos, negativos y de <strong>autenticación</strong>, así como la
-        correcta estructura y contenido de las respuestas.
-      </p>
-
-      <p>
-        Además, se implementó un flujo de <strong>integración continua</strong> con
-        <strong>GitHub Actions</strong>, configurando <strong>Newman</strong> para ejecutar
-        automáticamente las pruebas creadas en <strong>Postman</strong> en cada cambio del
-        repositorio.
-      </p>
-
+        <article class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-code project-icon"></i>
+            <span class="project-badge">Web Dev & API Testing</span>
+          </div>
+          <h3>
+            <a id="linkproyectoportafolio" href="https://github.com/juditcasamitjana/portafolio-qa-adalab" target="_blank">
+              Portafolio QA <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </h3>
+          <p>
+            Desarrollo de un portafolio web con <strong>HTML5</strong>, <strong>CSS3</strong> y
+            <strong>JavaScript</strong>, con formulario conectado a una <strong>API</strong> generada con
+            <strong>Supabase</strong>. Diseño de tablas y consultas en <strong>SQL</strong>.
+          </p>
+          <p>
+            <strong>Testing de APIs</strong> con <strong>Postman</strong>: pruebas GET, POST, PATCH y DELETE con
+            validación de códigos de respuesta, autenticación y estructura de respuestas.
+          </p>
+          <p>
+            Flujo de <strong>integración continua</strong> con <strong>GitHub Actions</strong> y
+            <strong>Newman</strong> para ejecución automática de las pruebas en cada cambio.
+          </p>
+          <div class="project-tags">
+            <span>HTML/CSS/JS</span>
+            <span>Postman</span>
+            <span>Newman</span>
+            <span>Supabase</span>
+            <span>GitHub Actions</span>
+          </div>
+        </article>
+      </div>
     </section>
 
+    <!-- Educación -->
     <section id="educacion">
       <h2 id="tituloeducacion">
-        <i class="fa fa-graduation-cap"></i> Educación
+        <i class="fa-solid fa-graduation-cap"></i> Educación
       </h2>
-
-      <h3>Bootcamp QA – Adalab</h3>
-      <p>Febrero 2026 – Actualidad</p>
-      <p>
-        Formación intensiva en Quality Assurance basada en fundamentos de ISTQB, incluyendo técnicas y tipos de pruebas.
-        Diseño y gestión de casos de prueba utilizando BDD y Gherkin, seguimiento de pruebas y defectos con Jira y
-        documentación en Confluence. Trabajo con metodologías ágiles (Scrum). Testing de APIs con Postman, validación de
-        datos mediante SQL y automatización de pruebas con Playwright y Pytest. Integración continua con GitHub Actions.
-      </p>
-
-
-      <h3>Bootcamp Programación Web – Adalab</h3>
-      <p>Septiembre 2022 - Diciembre 2024</p>
-      <p>
-        Formación en desarrollo web full stack, trabajando con HTML, CSS, JavaScript y React. Creación de aplicaciones
-        web, gestión del estado, consumo de APIs y desarrollo de proyectos completos. Introducción al backend con
-        Node.js y manejo de bases de datos.
-      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Febrero 2026 – Actualidad</span>
+            <h3>Bootcamp QA – Adalab</h3>
+            <p>
+              Formación intensiva en Quality Assurance basada en fundamentos de ISTQB, incluyendo técnicas y tipos de
+              pruebas. Diseño y gestión de casos de prueba utilizando BDD y Gherkin, seguimiento de pruebas y defectos
+              con Jira y documentación en Confluence. Trabajo con metodologías ágiles (Scrum). Testing de APIs con
+              Postman, validación de datos mediante SQL y automatización de pruebas con Playwright y Pytest.
+              Integración continua con GitHub Actions.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Septiembre 2022 – Diciembre 2024</span>
+            <h3>Bootcamp Programación Web – Adalab</h3>
+            <p>
+              Formación en desarrollo web full stack, trabajando con HTML, CSS, JavaScript y React. Creación de
+              aplicaciones web, gestión del estado, consumo de APIs y desarrollo de proyectos completos. Introducción
+              al backend con Node.js y manejo de bases de datos.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto">
       <h2 id="titulocontacto">
-        <i class="fa fa-envelope"></i> Contacto
+        <i class="fa-solid fa-envelope"></i> Contacto
       </h2>
-      <form id="contactForm" onsubmit="return enviarFormulario(event)">
-        <input id="nombre" type="text" placeholder="Nombre" />
-        <input id="email" type="email" placeholder="Email" />
-        <select id="asunto">
-          <option value="">---</option>
-          <option value="info">Información</option>
-          <option value="job">Oferta Trabajo</option>
-          <option value="other">Otro</option>
-        </select>
-        <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
-        <button id="enviar" type="submit">
-          <i class="fa fa-paper-plane"></i> Enviar
-        </button>
-      </form>
-      <p id="formMessage"></p>
+      <div class="contact-wrapper">
+        <form id="contactForm" onsubmit="return enviarFormulario(event)">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" required>
+              <option value="">Selecciona un asunto</option>
+              <option value="info">Información</option>
+              <option value="job">Oferta de Trabajo</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+          <button id="enviar" type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+          </button>
+        </form>
+        <p id="formMessage"></p>
+      </div>
     </section>
+  </main>
 
+  <footer>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://juditcasamitjana.github.io/" title="GitHub" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/judit-casamitjana" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+      <p>&copy; 2026 Judit Casamitjana. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <footer>
-      <p>&copy; All rights reserved.</p>
-    </footer>
+  <script src="script.js" defer></script>
+  <script>
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+    // Navbar background on scroll
+    window.addEventListener('scroll', function () {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
-<script src="script.js" defer></script>
 
 </html>
