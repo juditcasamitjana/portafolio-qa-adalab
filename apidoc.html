@@ -83,45 +83,45 @@
     <p>El <code>Key</code> lo obtienes desde Supabase en tu proyecto &gt; Settings &gt; API Keys.</p>
   
     <h2>GET - formulario - Obtener todos </h2>
-    <p><span class="method GET">GET</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1//rest/v1/formulario</code></p>
+    <p><span class="method GET">GET</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario</code></p>
     <p>Devuelve todos los registros de la tabla <code>formulario</code>.</p>
 
     <h2>GET - formulario - Filtrar por campos</h2>
-    <p><span class="method GET">GET</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1//rest/v1/formulario?campo=eq.valor&amp;campo2=eq.valor2</code></p>
+    <p><span class="method GET">GET</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario?campo=eq.valor&amp;campo2=eq.valor2</code></p>
     <p>Filtra los registros donde campo sea igual a <code>&lt;valor&gt;</code>.</p>
     <p>Campos disponibles para filtrar:</p>
     <ul>
-      <li>id</li><li>nombre</li><li>email</li><li>asunto</li><li>edad</li><li>mensaje</li>
+      <li>id</li><li>name</li><li>email</li><li>asunto</li><li>age</li><li>mensaje</li>
     </ul>
 
     <h2>POST - formulario - Crear nuevo</h2>
-    <p><span class="method POST">POST</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1//rest/v1/formulario</code></p>
+    <p><span class="method POST">POST</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario</code></p>
     <p>Crea un nuevo registro. Campos disponibles:</p>
     <ul>
-      <li><code>nombre</code> - opcional</li><li><code>email</code> -  (obligatorio)</li><li><code>asunto</code> -  (obligatorio)</li><li><code>edad</code> - opcional</li><li><code>mensaje</code> -  (obligatorio)</li>
+      <li><code>name</code> - opcional</li><li><code>email</code> -  (obligatorio)</li><li><code>asunto</code> -  (obligatorio)</li><li><code>age</code> - opcional</li><li><code>mensaje</code> -  (obligatorio)</li>
     </ul>
     <p><strong>Body de ejemplo:</strong></p>
     <pre>{
-  "nombre": "",
+  "name": "",
   "email": "",
   "asunto": "",
-  "edad": "",
+  "age": "",
   "mensaje": ""
 }</pre>
 
     <h2>PATCH - formulario - Editar </h2>
-    <p><span class="method PATCH">PATCH</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1//rest/v1/formulario?id=eq.&lt;id&gt;</code></p>
+    <p><span class="method PATCH">PATCH</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario?id=eq.&lt;id&gt;</code></p>
     <p>Actualiza el registro con el ID especificado. Puedes enviar uno o varios campos en el body:</p>
     <pre>{
-  "nombre": "<nuevo string="">",
+  "name": "<nuevo string="">",
   "email": "<nuevo string="">",
   "asunto": "<nuevo string="">",
-  "edad": "<nuevo string="">",
+  "age": "<nuevo string="">",
   "mensaje": "<nuevo string="">"
 }</nuevo></nuevo></nuevo></nuevo></nuevo></pre>
 
     <h2>DELETE - formulario - Eliminar </h2>
-    <p><span class="method DELETE">DELETE</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1//rest/v1/formulario?id=eq.&lt;id&gt;</code></p>
+    <p><span class="method DELETE">DELETE</span> <code>https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario?id=eq.&lt;id&gt;</code></p>
     <p>Elimina el registro con el ID especificado.</p>
 
 
@@ -223,4 +223,43 @@ function generate() {
 
 
 
-<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"></template></div></body></html>
+<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  dialog::backdrop  {
+    background-color: revert;
+  }
+
+  dialog.backdrop-hidden::backdrop  {
+    background-color: transparent;
+  }
+</style><div><div class="gf-app"></div></div></template></div></body></html>
