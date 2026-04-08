@@ -1,0 +1,1657 @@
+{
+  "info": {
+    "_postman_id": "e930ec7d-2053-40b3-9ccc-9dfd23e64dc0",
+    "name": "API FORM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53684256",
+    "_collection_link": "https://go.postman.co/collection/53684256-e930ec7d-2053-40b3-9ccc-9dfd23e64dc0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET FORM",
+      "item": [
+        {
+          "name": "GET FORM",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"ana\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Nombre valido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"laura\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?nombre=eq.laura",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "eq.laura"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Nombre invalido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.be.eq('[]');",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?nombre=eq.unknown",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "eq.unknown"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Asunto valido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"laura\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?asunto=eq.other",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "asunto",
+                  "value": "eq.other"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Asunto invalido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.be.eq(\"[]\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?asunto=eq.otherUnknown",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "asunto",
+                  "value": "eq.otherUnknown"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Email valido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"maria\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=eq.maria@yahoo.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.maria@yahoo.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Email invalida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.be.eq(\"[]\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=eq.mariayahoo.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.mariayahoo.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Edad valida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"maria@yahoo.com\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?edad=gt.20",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "edad",
+                  "value": "gt.20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Edad Invalida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"maria@yahoo.com\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?edad=gt.20",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "edad",
+                  "value": "gt.20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM - Sin autenticacion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"No API key found in request\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/formulario?edad=gt.20",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "edad",
+                  "value": "gt.20"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PATCH FORM",
+      "item": [
+        {
+          "name": "PATCH FORM - Nombre",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Juan modified\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Nombre vacio",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Asunto",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"asunto\": \"job - modified\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Asunto vacio",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"asunto\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Edad",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"edad\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Edad Invalida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"edad\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Edad vacia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"edad\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Email",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"juan_modified@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Email vacio",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Sin autenticacion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"edad\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM - Restaurar",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"juan\",\n    \"email\": \"juan@gmail.com\",\n    \"asunto\": \"job\",\n    \"edad\": null,\n    \"mensaje\": \"hola qa testing\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario?id=eq.7",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST FORM",
+      "item": [
+        {
+          "name": "POST FORM - Campos obligatorios",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"apitest@example.com\",\n    \"asunto\": \"nuevo asunto\",\n    \"mensaje\": \"Nuevo mensaje\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM - Campos obligatorios y opcionales",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test(\"Response time is less than 1000ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"apitest\",\n    \"email\": \"apitestoptional@example.com\",\n    \"asunto\": \"nuevo asunto\",\n    \"mensaje\": \"Nuevo mensaje\",\n    \"edad\": 23\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM - Sin email",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"apitest\",\n    \"asunto\": \"nuevo asunto\",\n    \"mensaje\": \"Nuevo mensaje\",\n    \"edad\": 23\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM - Sin asunto",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"apitest\",\n    \"email\": \"apitest@example.com\",\n    \"mensaje\": \"Nuevo mensaje\",\n    \"edad\": 23\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM - Sin mensaje",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"apitest\",\n    \"email\": \"apitest@example.com\",\n    \"asunto\": \"nuevo asunto\",\n    \"edad\": 23\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM - Sin autenticacion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"apitest\",\n    \"email\": \"apitest@example.com\",\n    \"asunto\": \"nuevo asunto\",\n    \"mensaje\": \"Nuevo mensaje\",\n    \"edad\": 23\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/formulario",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DELETE FORM",
+      "item": [
+        {
+          "name": "DELETE FORM - Nombre apitest",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?nombre=eq.apitest",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "eq.apitest"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM - Nombre apitestoptional",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=eq.apitestoptional@example.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.apitestoptional@example.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM - Email vacio",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM - Edad Invalida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?edad=eq.'1'",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "edad",
+                  "value": "eq.'1'"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM - Asunto vacio Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=eq.apitestoptional@example.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.apitestoptional@example.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM - Sin autenticacion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{API_URL}}/formulario?email=eq.apitestoptional@example.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "formulario"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.apitestoptional@example.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "value",
+        "value": "{{PASSWORD}}",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "apikey",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
