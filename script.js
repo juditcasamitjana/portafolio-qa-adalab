@@ -1,6 +1,6 @@
 // 1. CAMBIAR POR URL Y KEY DE TU API
-const SUPABASE_URL = 'https://ifgzperqnxoomyvvytzr.supabase.co/rest/v1/forms';
-const SUPABASE_API_KEY = 'sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ';
+const SUPABASE_URL = 'https://gbxwhanoumtwxumchyon.supabase.co/rest/v1/formulario';
+const SUPABASE_API_KEY = 'sb_publishable_D5qRStamUnyprNmPALx5eg_gwthvDk5';
 
 
 //ENVIAR DATOS DE UN FORMULARIO A UNA API CON POST
@@ -10,10 +10,10 @@ function enviarFormulario(event) {
 
   //3. CAMBIA SI ES NECESARIO LOS DATOS, DEBES INDICAR EL NOMBRE DEL CAMPO QUE QUIERES MANDAR A LA API, Y EL ID DEL FORMULARIO QUE TIENE ESE DATO.
   var data = {
-    name: document.getElementById('nombre').value, //campo name de la api, se obtiene del input del formulario con id nombre
+    nombre: document.getElementById('nombre').value, //campo name de la api, se obtiene del input del formulario con id nombre
     email: document.getElementById('email').value, //campo email de la api, se obtiene del input del formulario con id email
-    subject: document.getElementById('asunto').value, //campo subject de la api, se obtiene del input del formulario con id asunto
-    message: document.getElementById('mensaje').value //campo message de la api, se obtiene del input del formulario con id mensaje
+    asunto: document.getElementById('asunto').value, //campo subject de la api, se obtiene del input del formulario con id asunto
+    mensaje: document.getElementById('mensaje').value //campo message de la api, se obtiene del input del formulario con id mensaje
   }
   postAPI(data);
 
