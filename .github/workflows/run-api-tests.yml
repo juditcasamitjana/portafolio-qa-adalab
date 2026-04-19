@@ -26,13 +26,13 @@ jobs:
 
       - name: Download Postman collection using Postman API
         run: |
-          curl --location --request GET "https://api.getpostman.com/collections/33801345-181c803c-a263-4988-9141-4482d833eb4c" \
+          curl --location --request GET "https://api.getpostman.com/collections/53684256-e930ec7d-2053-40b3-9ccc-9dfd23e64dc0" \
           --header "X-Api-Key: ${{ secrets.POSTMAN_API_KEY }}" \
           --output collection.json
 
       - name: Download Postman environment using Postman API
         run: |
-          curl --location --request GET "https://api.getpostman.com/environments/33801345-e08ef3e0-e06f-4b5c-936b-179df25cea75" \
+          curl --location --request GET "https://api.getpostman.com/environments/53684256-b97685d1-65c1-4fab-889d-d976ea090208" \
           --header "X-Api-Key: ${{ secrets.POSTMAN_API_KEY }}" \
           --output environment.json
 
